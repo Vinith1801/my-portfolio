@@ -11,22 +11,22 @@ menuIcon.addEventListener('click', () => {
     }
 });
 
-// Tab functionality for About Section
-const tabLinks = document.querySelectorAll('.tab-links li');
-const tabs = document.querySelectorAll('.tab');
+// Vertical Tab functionality
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
 
-tabLinks.forEach((tabLink) => {
-    tabLink.addEventListener('click', () => {
-        // Remove active class from all tab links
-        tabLinks.forEach((link) => link.classList.remove('active'));
-        // Add active class to the clicked tab link
-        tabLink.classList.add('active');
+tabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        tabBtns.forEach((b) => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
 
         // Hide all tab contents
-        tabs.forEach((tab) => tab.classList.remove('active'));
+        tabContents.forEach((content) => content.classList.remove('active'));
 
         // Show the corresponding tab content
-        const activeTab = document.getElementById(tabLink.getAttribute('data-tab'));
+        const activeTab = document.getElementById(btn.getAttribute('data-tab'));
         activeTab.classList.add('active');
     });
 });
