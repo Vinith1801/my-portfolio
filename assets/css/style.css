@@ -1,10 +1,11 @@
+/* Global Resets and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -12,6 +13,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Navigation Bar Styles */
 nav {
     display: flex;
     justify-content: space-between;
@@ -21,8 +23,13 @@ nav {
     border-radius: 29px;
     box-shadow: -11px 11px 55px #c4c4c4, 11px -11px 55px #ffffff;
     border: 1px solid #1d03037e;
-    margin: 10px; /* Add margin to ensure shadow is visible */
+    margin: 10px; 
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 5px; 
+    z-index: 10;
 }
+
 
 .logo {
     display: flex;
@@ -49,7 +56,7 @@ nav {
     top: 50px;
     right: 0;
     background-color: white;
-    border-radius: 15px; /* Optional: rounded corners for menu dropdown */
+    border-radius: 15px;
     border: 1px solid #ccc;
     padding: 10px;
     width: 250px; /* Increase the width */
@@ -57,6 +64,7 @@ nav {
 
 .nav-links li {
     margin: 10px 0;
+    text-align: center;
 }
 
 .nav-links li a {
@@ -104,7 +112,6 @@ nav {
     }
 }
 
-/* Adjustments for smaller screens to center and increase width */
 @media (max-width: 767px) {
     .nav-links {
         width: 90%; /* Set the width to 90% of the viewport */
@@ -114,7 +121,7 @@ nav {
     }
 }
 
-/* Hero Section */
+/* Hero Section Styles */
 .hero {
     display: flex;
     align-items: center;
@@ -142,7 +149,6 @@ nav {
 
 .hero-content p {
     font-size: 18px;
-    line-height: 1.5;
     margin-top: 10px;
 }
 
@@ -160,7 +166,6 @@ nav {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add some shadow to the image */
 }
 
-/* Responsive Hero Section */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -178,104 +183,154 @@ nav {
     }
 }
 
-/* About Section */
+/* About Section Styles */
 .about {
-    padding: 50px;
+    margin: 20px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 15px;
-    margin: 20px;
+    display: flex;
+    flex-direction: row;
     box-shadow: -11px 11px 55px #c4c4c4, 11px -11px 55px #ffffff;
 }
 
-h2 {
+.text-section {
+    padding: 40px;
+    flex: 1;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.image-section {
+    flex: 1;
+    background: url('../images/vector.png') no-repeat center center;
+    background-size: contain;
+    border-radius: 25px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        padding: 20px;
+    }
+
+    .image-section {
+        background-size: cover; /* Ensure the image covers the section */
+        height: 200px; /* Adjust the height for smaller screens */
+        border-radius: 15px; /* Adjust border-radius for smaller screens */
+    }
+}
+
+/* Skills Section Styles */
+.skills {
+    margin: 20px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: -11px 11px 55px #c4c4c4, 11px -11px 55px #ffffff;
+}
+
+.skills h1 {
     text-align: center;
+    font-size: 36px;
+    font-weight: 700;
     margin-bottom: 40px;
 }
 
-.about-container-alt {
+.skills-container {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.about-info {
-    flex: 1;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.about-content-alt {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.vertical-tabs {
-    display: flex;
-    flex-direction: row;
-}
-
-.tab-btn {
-    padding: 15px;
-    background-color: #ffffff;
-    color: #007BFF;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    margin-right: 10px;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-    transition: background-bottom 0.3s ease;
-    border-bottom: 2px solid transparent;
-}
-
-.tab-btn:hover, .tab-btn.active {
-    border-bottom: 3px solid #007BFF;
-    color: #130101;
-    /* border-bottom: 2px solid #ffffff; */
-}
-
-.tab-contents {
+.card {
+    background-color: white;
+    border-radius: 15px;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.tab-content {
-    display: none;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.tab-content.active {
-    display: block;
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007BFF;
 }
 
-/* Skills Button Styles */
-.skill-buttons {
+.skill-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 10px; /* Spacing between skill cards */
 }
 
-.skill-buttons button {
+.skill-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 100px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.skill-buttons button:hover {
-    background-color: #0056b3;
+.skill-card i {
+    font-size: 24px;
 }
 
+.skill-card:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: translateY(-5px);
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .about-container-alt {
+    .skills-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .skill-cards {
+        justify-content: space-around;
+    }
+
+    .skill-card {
+        margin-bottom: 10px;
+        width: 100%;
     }
 }

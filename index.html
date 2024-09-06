@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinith - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <nav>
@@ -27,7 +29,7 @@
         <section class="hero" id="hero">
             <div class="hero-content">
                 <h2>Hey, I'm <span>Vinith Bylapudi</span></h2>
-                <p>A passionate Full Stack Developer with 1 year of experience. I specialize in creating dynamic and responsive websites and applications. Let's build something amazing together!</p>
+                <p>Let's build something amazing together!</p>
             </div>
             <div class="hero-image">
                 <img src="assets/images/logo.jpg" alt="Vinith's Photo">
@@ -36,45 +38,78 @@
 
     <!-- About Section -->
     <section class="about" id="about">
-        <h2>About Me</h2>
-        <div class="about-container-alt">
-            <!-- Column 1: Introduction -->
-            <div class="about-info">
-                <p>I completed my B.Tech in Electronics and Communication Engineering (ECE) in 2023 and have since been working as a Full Stack Developer. My journey in web development has allowed me to develop and hone skills in HTML, CSS, PHP, MySQL, JavaScript, and more. I have a strong foundation in both front-end and back-end development, and I am currently expanding my knowledge in Node.js and React.</p>
+        <div class="image-section"></div>
+            <div class="text-section">
+                <h1>About Me</h1>
+                <p>A passionate Full Stack Developer with 1 year of experience. I specialize in creating dynamic and responsive websites and applications. I completed my B.Tech in Electronics and Communication Engineering (ECE) in 2023 and have since been working as a Full Stack Developer. My journey in web development has allowed me to develop and hone skills in HTML, CSS, PHP, MySQL, JavaScript, and more. I have a strong foundation in both front-end and back-end development, and I am currently expanding my knowledge in Node.js and React.</p>
             </div>
+    </section>
 
-            <!-- Column 2: Horizontal Tabs -->
-            <div class="about-content-alt">
-                <div class="vertical-tabs">
-                    <button class="tab-btn active" data-tab="education">Education</button>
-                    <button class="tab-btn" data-tab="skills">Skills</button>
-                    <button class="tab-btn" data-tab="experience">Experience</button>
+<!-- Skills Section -->
+<section class="skills" id="skills">
+    <h1>My Skills</h1>
+    <div class="skills-container">
+        <!-- Frontend Development Card -->
+        <div class="card">
+            <h2>Frontend Development</h2>
+            <div class="skill-cards">
+                <div class="skill-card">
+                    <i class='bx bxl-html5'></i> HTML
                 </div>
-                <div class="tab-contents">
-                    <div id="education" class="tab-content active">
-                        <!-- <h3>Education</h3> -->
-                        <p>B.Tech in Electronics and Communication Engineering, 2023</p>
-                    </div>
-                    <div id="skills" class="tab-content">
-                        <!-- <h3>Skills</h3> -->
-                        <div class="skill-buttons">
-                            <button>HTML</button>
-                            <button>CSS</button>
-                            <button>JavaScript</button>
-                            <button>PHP</button>
-                            <button>MySQL</button>
-                            <button>Node.js</button>
-                            <button>React</button>
-                        </div>
-                    </div>
-                    <div id="experience" class="tab-content">
-                        <!-- <h3>Experience</h3> -->
-                        <p>1 year of experience as a Full Stack Developer</p>
-                    </div>
+                <div class="skill-card">
+                    <i class='bx bxl-css3'></i> CSS
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-javascript'></i> JavaScript
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-bootstrap'></i> Bootstrap
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-react'></i> React
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Backend Development Card -->
+        <div class="card">
+            <h2>Backend Development</h2>
+            <div class="skill-cards">
+                <div class="skill-card">
+                    <i class='bx bxl-php'></i> PHP
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-mysql'></i> MySQL
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxl-nodejs'></i> Node.js
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxs-server'></i> Express.js
+                </div>
+            </div>
+        </div>
+        <!-- Other Skills Card -->
+        <div class="card">
+            <h2>Other Skills</h2>
+            <div class="skill-cards">
+                <div class="skill-card">
+                    <i class='bx bxl-git'></i> Git & GitHub
+                </div>
+                <div class="skill-card">
+                    <i class='bx bx-mobile'></i> Responsive Design
+                </div>
+                <div class="skill-card">
+                    <i class='bx bxs-network-chart'></i> RESTful APIs
+                </div>
+                <div class="skill-card">
+                    <i class='bx bx-shield'></i> Version Control
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
